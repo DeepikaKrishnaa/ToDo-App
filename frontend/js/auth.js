@@ -30,7 +30,7 @@ function signup() {
   }
 
 
-  fetch("http://localhost:3000/api/signup", {
+  fetch("https://my-todo-app-backend.up.railway.app/api/signup", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, email, password })
@@ -59,7 +59,7 @@ function login() {
     return;
   }
 
-  fetch("http://localhost:3000/api/login", {
+  fetch("https://my-todo-app-backend.up.railway.app/api/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -91,7 +91,7 @@ function confirmLogin() {
     return;
   }
 
-  fetch("http://localhost:3000/api/login", {
+  fetch("https://my-todo-app-backend.up.railway.app/api/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
