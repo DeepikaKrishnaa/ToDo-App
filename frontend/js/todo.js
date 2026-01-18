@@ -37,7 +37,7 @@ function addTaskUI(text, taskId, completed = 0) {
     const isCompleted = checkbox.checked;
     span.classList.toggle("completed", isCompleted);
 
-    fetch(`http://localhost:3000/api/tasks/${li.dataset.id}/completed`, {
+    fetch(`https://my-todo-app-backend.up.railway.app/api/tasks/${li.dataset.id}/completed`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ completed: isCompleted })
@@ -69,7 +69,7 @@ function addTaskUI(text, taskId, completed = 0) {
       span.contentEditable = false;
       editBtn.textContent = "✏️";
 
-      fetch(`http://localhost:3000/api/tasks/${li.dataset.id}`, {
+      fetch(`https://my-todo-app-backend.up.railway.app/api/tasks/${li.dataset.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title: span.textContent })
@@ -81,7 +81,7 @@ function addTaskUI(text, taskId, completed = 0) {
   deleteBtn.textContent = "🗑️";
   deleteBtn.onclick = () => {
     const userId = localStorage.getItem("userId");
-    fetch(`http://localhost:3000/api/tasks/${li.dataset.id}?userId=${userId}`, {
+    fetch(`https://my-todo-app-backend.up.railway.app/api/tasks/${li.dataset.id}?userId=${userId}`, {
       method: "DELETE",
     })
     .then(res => res.json())
@@ -107,7 +107,7 @@ function addTask(text) {
 
   if (!text || !userId) return;
 
-  fetch("http://localhost:3000/api/tasks", {
+  fetch("https://my-todo-app-backend.up.railway.app/api/tasks", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -142,7 +142,7 @@ function loadTasks() {
   const userId = localStorage.getItem("userId");
   if (!userId) return;
 
-  fetch(`http://localhost:3000/api/tasks/${userId}`)
+  fetch(`https://my-todo-app-backend.up.railway.app/api/tasks/${userId}`)
     .then(res => res.json())
     .then(data => {
       if (data.success && data.tasks.length > 0) {
