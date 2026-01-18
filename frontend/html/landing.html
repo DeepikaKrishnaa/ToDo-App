@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your To Do</title>
+  <link rel="stylesheet" href="/frontend/css/base.css" />
+  <link rel="stylesheet" href="/frontend/css/landing.css" />
+</head>
+<body>
+
+  <div class="landing-container">
+    <div class="landing-left"></div>
+
+    <div class="landing-right float-in">
+      <h1>YOUR TO DO</h1>
+      <p>Stay focused, Stay organized</p>
+
+      <button class="btn" id="getStartedBtn">Get Started</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("getStartedBtn").onclick = () => {
+      window.location.href = "/frontend/html/login.html";
+    };
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+.landing-container {
+  display: flex;
+  height: 100vh;
+}
+
+.landing-left {
+  flex: 1;
+  background-image: url("/assets/landing.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 50% 50% 0;
+}
+
+.landing-right {
+  margin-right: 10%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-right h1 {
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
+.landing-right p {
+  margin: 30px 0 60px;
+  font-size: 30px;
+  text-align: center;
+}
+
+button {
+  padding: 20px 50px;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Georgia", serif;
+  border-radius: 12px;
+  border: 2px solid #023D5A;
+  background-color: #8fc1e3;
+  cursor: pointer;
+}

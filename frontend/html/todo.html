@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <script>
+    if (!localStorage.getItem("userId")) {
+      window.location.href = "/frontend/html/login.html";
+    }
+  </script>
+
+  <title>Your To Do</title>
+  <link rel="stylesheet" href="/frontend/css/base.css">
+  <link rel="stylesheet" href="/frontend/css/todo.css">
+</head>
+
+<body class="todo-bg">
+
+  <header>
+    <button class="btn" id="logoutBtn">Logout</button> 
+  </header>
+
+  <div class="bubbles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="todo-wrapper">
+    <div class="todo-card card float-in">
+
+      <div class="add-task">
+        <span class="plus">+</span>
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="Add a task"
+        />
+      </div>
+
+      <p id="emptyState" class="empty-text">No tasks yet!</p>
+
+      <ul id="taskList"></ul>
+
+    </div>
+  </div>
+
+  <script src="/frontend/js/todo.js"></script>
+</body>
+</html>

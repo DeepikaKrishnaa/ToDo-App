@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="/frontend/css/base.css">
+  <link rel="stylesheet" href="/frontend/css/auth.css">
+</head>
+
+<body class="auth-bg"
+  style="background-image: url('/assets/signup.png');">
+
+  <div class="auth-wrapper right">
+    <div class="auth-card card float-in">
+      <h1>SIGN UP</h1>
+
+      <label>Name</label>
+      <input type="text" id="signupName">
+
+      <label>Email</label>
+      <input type="email" id="signupEmail">
+
+      <label>Password</label>
+      <input type="password" id="signupPassword">
+
+      <p class="error" id="signupError"></p>
+
+      <button class="btn" onclick="signup()">Sign Up</button>
+
+      <p class="text-link">
+        Already have an account?
+        <a href="/frontend/html/login.html">Log In</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="/frontend/js/auth.js"></script>
+</body>
+</html>
