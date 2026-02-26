@@ -5,7 +5,7 @@
 
 .landing-left {
   flex: 1;
-  background-image: url("/assets/landing.png");
+  background-image: url("../assets/landing.png");
   background-size: cover;
   background-position: center;
   border-radius: 0 50% 50% 0;
